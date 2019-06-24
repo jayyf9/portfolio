@@ -1,0 +1,42 @@
+import portfolioData from "./../portfolio-data.json";
+import React from 'react';
+import './portfolio-item.css';
+
+export default {
+  data() {
+    return {
+      websites: portfolioData
+    }
+  }
+}
+function PortfolioItem() {
+  return (
+    <div>
+      {/* <h3 class="site-title">{{websites[$route.params.id].title}}</h3> */}
+      <div class="information row">
+        <div class="col s7">
+          <b>Description:</b>
+          {/* <p>{{websites[$route.params.id].description}}</p> */}
+        </div>
+        <div class="col s2">
+          {/* <b>Client:</b><br><br><img style="width: 80%;" :src="websites[$route.params.id].client"> */}
+        </div>
+        <b>Skills/Tools:</b>
+        <div class="col s3">
+          <div v-for="(skills,i) in websites[$route.params.id].skills" class="skills-section">
+            {/* <div class="skills valign-wrapper"><i :class="skills.icon" class="icons"></i> &nbsp;{{skills.title}}</div> */}
+          </div>
+        </div>
+      </div>
+      {/* <v-carousel vertical="true">
+      <v-carousel-item
+        v-for="(website,i) in websites[$route.params.id].siteImages"
+        :key="i"
+        :src="website"
+      ></v-carousel-item>
+    </v-carousel> */}
+    </div>)
+}
+
+
+export default PortfolioItem;

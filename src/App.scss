@@ -1,0 +1,71 @@
+.logo {
+  margin-top: 10px;
+}
+
+.nav-items {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  :hover{
+    color: gold;
+  }
+  .nav-link {
+    text-decoration: none;
+    padding-right: 10px;
+  }
+}
+
+.headers {
+  text-align: center;
+}
+
+.main-header {
+  font-size: 50px;
+  a {
+    text-decoration: none;
+  }
+  :hover {
+    color: rgba(255, 217, 0, 0.8);
+  }
+}
+
+.sub-header {
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.contact-nav {
+  display: flex;
+  margin-top: -10px;
+  a:hover {
+    background-color: gold;
+    color: #039be5;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(200, 200, 200, 1);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(200, 200, 200, 1);
+    box-shadow: 0px 3px 0px 0px rgba(200, 200, 200, 1);
+  }
+}
+
+.contact-button {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  flex: 1;
+  width: 60px;
+  height: 30px;
+  color: rgb(0, 0, 185);
+  border-radius: 5px;
+  margin-top: -4px;
+  padding: 5px;
+  background-color: rgb(66, 140, 238);
+  :hover {
+    background-color: gold;
+  }
+}
