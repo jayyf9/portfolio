@@ -1,8 +1,12 @@
+
 .logo {
   margin-top: 10px;
 }
 
 .nav-items {
+  a {
+    color: #039be5;
+  }
   font-size: 15px;
   text-align: center;
   font-weight: bold;
@@ -23,6 +27,7 @@
 .main-header {
   font-size: 50px;
   a {
+    color: #039be5;
     text-decoration: none;
   }
   :hover {

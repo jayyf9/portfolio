@@ -4,12 +4,13 @@ import home from './components/home/home';
 import portfolio from './components/portfolio/portfolio';
 import blog from './components/blog/blog';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import 'typeface-roboto';
+import EmailIcon from '@material-ui/icons/Email';
+
 function App() {
   return (
     <Router>
       <div className="contact-nav">
-        <a href="mailto:jayyf9@gmail.com?Subject=Website%20query"><div className="contact-button"></div></a>&nbsp;
+        <a href="mailto:jayyf9@gmail.com?Subject=Website%20query"><div className="contact-button"><EmailIcon>star</EmailIcon></div></a>&nbsp;
         <a href="https://twitter.com/Jayyf9"><div className="contact-button"></div></a>&nbsp;
         <a href="https://www.linkedin.com/in/jake-french-200a0462/"><div className="contact-button"></div></a>&nbsp;
       </div>

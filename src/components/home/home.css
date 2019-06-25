@@ -1,14 +1,31 @@
 .intro-text {
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 80px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 95%;
+    font-size: 30px;
+}
+
+.sub-intro-text {
+    font-size: 25px;
 }
 
 .link {
     cursor: pointer;
+    color: #039be5;
+    text-decoration: none;
+}
+
+.img:hover {
+    color: gold;
+}
+
+.img {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 .link:hover {
