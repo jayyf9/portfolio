@@ -42,35 +42,28 @@
 }
 
 .contact-nav {
+  a {
+    background-color: pink;
+  }
   display: flex;
   margin-top: -10px;
-  a:hover {
-    background-color: gold;
-    color: #039be5;
-    -webkit-box-shadow: 0px 3px 0px 0px rgba(200, 200, 200, 1);
-    -moz-box-shadow: 0px 3px 0px 0px rgba(200, 200, 200, 1);
-    box-shadow: 0px 3px 0px 0px rgba(200, 200, 200, 1);
-  }
 }
 
 .contact-button {
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
+  .icon {
+    margin-top: 8px;
+  }
+  :hover {
+    background-color: gold;
+  }
+  text-align: center;
   border-radius: 8px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
   cursor: pointer;
   flex: 1;
   width: 60px;
   height: 30px;
-  color: rgb(0, 0, 185);
-  border-radius: 5px;
+  color: white;
   margin-top: -4px;
   padding: 5px;
   background-color: rgb(66, 140, 238);
-  :hover {
-    background-color: gold;
-  }
 }
