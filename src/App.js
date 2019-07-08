@@ -4,12 +4,12 @@ import home from './components/home/home';
 import portfolio from './components/portfolio/portfolio';
 import portfolioItem from './components/portfolio/portfolio-item/portfolio-item';
 import blog from './components/blog/blog';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import EmailIcon from '@material-ui/icons/Email';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="contact-nav">
         <a href="mailto:jayyf9@gmail.com?Subject=Website%20query"><div className="contact-button"><EmailIcon className="icon">Email</EmailIcon></div></a>&nbsp;
         <a href="https://twitter.com/Jayyf9"><div className="contact-button"><EmailIcon className="icon">star</EmailIcon></div></a>&nbsp;
@@ -24,11 +24,12 @@ function App() {
           <Link className="nav-link" to="/portfolio">Portfolio -</Link>
           <Link className="nav-link" to="/blog">Blog</Link>
       </div>
+      <Route exact path="/" component={home} />  
       <Route path="/home" component={home} />
       <Route path="/portfolio" component={portfolio} />
       <Route path="/portfolioItem/:id" component={portfolioItem} />
       <Route path="/blog" component={blog} />
-    </BrowserRouter>
+    </Router>
   );
 }
 
