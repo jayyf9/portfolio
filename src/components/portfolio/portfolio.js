@@ -1,20 +1,19 @@
 import React from "react";
-import "./portfolio.css";
-import portfolioData from "./portfolio-data.json";
+import portfolioData from "./portfolio-data";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import "./portfolio.css";
 
 export default function Portfolio() {
   const websites = portfolioData.map(website => {
     return (
-      <Link className="portfolio-item" to="/portfolioItem/{website.id}">
+      <Link className="portfolio-item" to={'/portfolioItem/' + website.id}>
         <div className="card">
           <div className="card-image">
-            <img class="site-cover" src={require('../../images/portfolio-items/multione-web/multione-web-thumbnail.png')} />
-            {website.img}
+            <img className="site-cover" src={website.img} />
           </div>
-          <div className="card-content portfolio-card-content">
-            <span className="card-title">{website.title}</span>
-            <img src="{website.client}" />
+          <div className="site-content">
+            <span className="site-title">{website.title}</span>
+            <img className="site-client" src={website.client} />
           </div>
         </div>
       </Link>

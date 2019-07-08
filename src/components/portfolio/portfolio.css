@@ -1,4 +1,4 @@
-.portfolio-card-content {
+.site-content {
   height: 80px;
 }
 
@@ -6,18 +6,29 @@
   display: flex;
   margin-top: 40px;
   min-width: 850px;
+  flex-wrap: wrap;
+}
+.site-title {
+  height: 80px;
 }
 
 .card-image {
   text-align: center;
+  width: 100%;
 }
 
 .site-cover {
-  max-height: 300px;
   height: 350px;
 }
 
+.site-client {
+  width:100px; 
+  float:right; 
+  position: relative;
+}
+
 .portfolio-item {
+  width: 700px;
   max-height: 500px;
   padding: 10px;
 }
