@@ -1,0 +1,49 @@
+.portfolioContainer {
+  display: flex;
+  margin-top: 40px;
+  min-width: 850px;
+  flex-wrap: wrap;
+
+}
+
+.portfolio {
+  background-color: white;
+  margin: 6px;
+  padding: 6px;
+  width: 48%;  
+  border-radius: 10px;
+}
+
+.portfolio:hover{ 
+  background-color: rgba(66, 140, 238, 0.7);
+  .siteTitle {
+    color: white;
+  }
+} 
+
+.portfolioImageCover {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  text-align: center;
+  height: 380px;
+  overflow: hidden;
+  .siteCover {
+    width: 100%;
+  }
+}
+
+.siteContent {
+  height: 60px;
+  padding: 15px;
+  .siteTitle {
+    font-size: 30px;
+    color: #039be5;
+  }
+  .siteClient {
+    width:140px;
+    float:right; 
+  }
+}
+a {
+  text-decoration: none;
+}

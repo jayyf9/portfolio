@@ -1,0 +1,34 @@
+
+  .blog {
+    height: 430px;
+    margin-top: 40px;
+    .blogImageCover {
+      width: 100%;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      text-align: center;
+      height: 380px;
+      overflow: hidden;
+    }
+    .blogTitle {
+      color: #039be5 !important;
+    }
+  }
+
+  .blog:hover {
+    color: white;
+    background-color: rgba(66, 140, 238, 0.7)
+  }
+
+  .readMore {
+    width: 100%; 
+    height: 40px; 
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .readMore:hover {
+    background-color: gold !important;
+  }
+  .post {
+    margin-bottom: 50px;
+  }

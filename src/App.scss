@@ -3,7 +3,7 @@
   margin-top: 10px;
 }
 
-.nav-items {
+.navItems {
   a {
     color: #039be5;
   }
@@ -14,9 +14,10 @@
   :hover{
     color: gold;
   }
-  .nav-link {
+  .navLink {
     text-decoration: none;
     padding-right: 10px;
+    font-size: 25px;
   }
 }
 
@@ -24,46 +25,37 @@
   text-align: center;
 }
 
-.main-header {
+.mainHeader {
   font-size: 50px;
-  a {
-    color: #039be5;
-    text-decoration: none;
-  }
-  :hover {
-    color: rgba(255, 217, 0, 0.8);
-  }
+  color: #039be5;
+  text-decoration: none;
 }
 
-.sub-header {
+.subHeader {
   font-size: 18px;
   border-radius: 10px;
   padding: 2px;
 }
 
-.contact-nav {
-  a {
-    background-color: pink;
-  }
+.contactNav {
   display: flex;
   margin-top: -10px;
-}
-
-.contact-button {
-  .icon {
-    margin-top: 8px;
+  width: 450px;
+  .contactButton {
+    background-color: rgb(66, 140, 238);
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+    color: white;
+    margin-top: -4px;
+    padding: 5px;
+    .icon {
+      margin-top: 12px;
+      width: 30px;
+    }
   }
-  :hover {
-    background-color: gold;
+  .contactButton:hover {
+    background-color: gold !important;
   }
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-  flex: 1;
-  width: 60px;
-  height: 30px;
-  color: white;
-  margin-top: -4px;
-  padding: 5px;
-  background-color: rgb(66, 140, 238);
 }

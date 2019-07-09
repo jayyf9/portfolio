@@ -1,28 +1,24 @@
 import React from "react";
 import portfolioData from "./portfolio-data";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import "./portfolio.scss";
+import styles from "./portfolio.module.scss";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const websites = portfolioData.map(website => {
     return (
-      <div className="portfolio-item">
-      <Link to={'/portfolioItem/' + website.id}>
-        <div className="card">
-          <div className="card-image">
-            <img alt="site cover" className="site-cover" src={website.img} />
+      <Link className={styles.portfolio} to={'/portfolioItem/' + website.id}>
+          <div className={styles.portfolioImageCover}>
+            <img alt="site cover" className={styles.siteCover} src={website.img} />
           </div>
-          <div className="site-content">
-            <span className="site-title">{website.title}</span>
-            <img alt="site client" className="site-client" src={website.client} />
+          <div className={styles.siteContent}>
+            <span className={styles.siteTitle}>{website.title}</span>
+            <img className={styles.siteClient} alt="site client" src={website.client} />
           </div>
-        </div>
       </Link>
-      </div>
     );
   });
 
   return (
-    <div className="container">{websites}</div>
+    <div className={styles.portfolioContainer}>{websites}</div>
   );
 }

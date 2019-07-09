@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css';
-
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class Home extends React.Component {
             { this.state.isHovering === 'amsterdam' ? <img className="tooltip" src={ require('./../../images/amsterdam.jpg') } /> : null }
             .</h4>
             <div className="sub-intro-text">
-              <h5>I work freelance so <a href="" className="link">check out some of my work</a> and if you are interested 
+              <h5>I work freelance so <Link to="/Portfolio" className="link">check out some of my work</Link> and if you are interested 
               <a href="mailto:jayyf9@gmail.com?Subject=Website%20query" className="link"> get in touch!</a></h5>
             </div>
         </div>

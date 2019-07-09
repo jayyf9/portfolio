@@ -1,34 +1,33 @@
 import React from 'react';
 import portfolioData from "./../portfolio-data.js";
-import './portfolio-item.css';
+import styles from './portfolio-item.module.scss';
+import ImageSlider from './../../shared/image-slider/image-slider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 export default function PortfolioItem({match}) {
     return (
       <div>
-        <h3 class="site-title">{portfolioData[match.params.id].title}</h3>
-        <div class="information row">
-          <div class="col s7">
-              <b>Description:</b>
+        <h3 className={styles.siteTitle}>{portfolioData[match.params.id].title}</h3>
+        <div className={styles.siteInformation}>
+          <div className={styles.siteDescription}>
+            <b className={styles.sectionTitle}>Description:</b>
             <p>{portfolioData[match.params.id].description}</p>
           </div>
-          <div class="col s2">
-            <b>Client:</b><br /><br /><img alt="site-client" className="site-client" src={portfolioData[match.params.id].client} />
+          <div className={styles.siteClient}>
+            <b className={styles.sectionTitle}>Client:</b><br /><br />
+            <img alt="site-client" className={styles.siteClientImage} src={portfolioData[match.params.id].client} />
           </div>
-          <b>Skills/Tools:</b>
-          <div class="col s3"></div>
+          <div>
+            <b className={styles.sectionTitle}>Skills/Tools:</b>
+            {portfolioData[match.params.id].skills.map(skill => {
+              return (
+                <div className={styles.siteSkills}><FontAwesomeIcon icon={skill.icon} />{skill.title}</div>
+           
+              )
+            })}
+          </div>
+          </div>
 
-          {portfolioData[match.params.id].skills.map(skill => {
-            return (
-              <div class="skills-section">
-                <div class="skills valign-wrapper"><i class="icons"></i> {skill.title}</div>
-              </div>
-            )
-          })}
-          
-          {portfolioData[match.params.id].siteImages.map(siteImage => {
-            return (
-                <img alt="siteImage" className="site-image" src={siteImage} />
-            )
-          })}
       </div>
-        </div>)}
+        )}

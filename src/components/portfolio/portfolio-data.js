@@ -1,3 +1,7 @@
+import { faAngular } from '@fortawesome/free-brands-svg-icons'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons'
+
 var portfolioData = [{
     "id": 0,
     "title": "MultiOne Web",
@@ -12,15 +16,15 @@ var portfolioData = [{
         require("../../images/portfolio-items/multione-web/multione-web-5.png")
     ],
     "skills": [{
-            "icon": "fas fa-pencil-alt",
+            "icon": faPencilAlt,
             "title": "Design"
         },
         {
-            "icon": "fab fa-angular",
+            "icon": faAngular,
             "title": "Angular"
         },
         {
-            "icon": "fab fa-node-js",
+            "icon": faNodeJs,
             "title": "NodeJS"
         }
     ]
@@ -40,11 +44,11 @@ var portfolioData = [{
         require("../../images/portfolio-items/altran-academy/altran-academy6.png")
     ],
     "skills": [{
-            "icon": "fab fa-angular",
+            "icon": faAngular,
             "title": "Angular"
         },
         {
-            "icon": "fab fa-node-js",
+            "icon": faNodeJs,
             "title": "NodeJS"
         }
     ]
@@ -66,7 +70,7 @@ var portfolioData = [{
         require("../../images/portfolio-items/factory-of-the-future/fotf8.png")
     ],
     "skills": [{
-        "icon": "fab fa-angular",
+        "icon": faAngular,
         "title": "Angular"
     }]
 }

@@ -1,0 +1,36 @@
+  .siteInformation {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .siteTitle {
+    color: #039be5;
+    font-size: 40px;
+  }
+
+  .siteDescription p {
+    width: 95%;
+  }
+  
+  .siteClient {
+    width: 90%;
+    .siteClientImage {
+      width: 200px;
+    }
+  }
+
+  .siteSkills {
+    flex: 1;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .siteSkills:hover {
+    cursor: pointer;
+    color: #039be5;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    font-weight:bold;
+  }

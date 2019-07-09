@@ -1,33 +1,25 @@
 import React from 'react';
-import './blog.css';
-import blogData from "./blog-data.json";
-
+import blogData from "./blog-data";
+import styles from './blog.module.scss';
+import { Link } from "react-router-dom";
 
 export default function Blog() {
+  const blogs = blogData.map(blog => {
   return (
-    <div className="blogContainer">
-      <div className="row">
-        <div v-for="post of posts" className="post col s6 m6">
-          <div className="post-row">
-            {/* <router-link class="blog-post" :to="{path: '/blog/post/' + post.url}"> */}
-            <div className="card">
-              <div className="card-image">
-                {/* <img style="height: 300px;" v-bind: src="post.img"> */}
-                            {/* <!-- The size of this image moves everything around!!! (may be because of the image used) --> */}
-              </div>
-              {/* <h3 class="center-align card-title">{{ post.title }}</h3> */}
-              <div className="card-content">
-                {/* <b>{{post.header}}</b>
-                            <p>{{post.content}}<span>.....</span></p> */}
-                {/* <v-btn class="button read-more" style="width: 100%; height: 40px; margin-top: 20px;">Read More..</v-btn> */}
-              </div>
-
-
-            </div>
-            {/* </router-link> */}
-          </div>
+      <Link className={styles.blog} to={'/blog/post/0'}>
+        <div className={styles.blogImage}>
+          <img alt="" src={blog.img} />
         </div>
-      </div>
-    </div>
-  )
-}
+        <h3 className={styles.blogTitle}>{blog.title}</h3>
+        <div className={styles.blogContent}>
+            <b>{blog.header}</b>
+            <p>{blog.content}<span>.....</span></p>
+            <button className={styles.readMore}>Read More..</button>
+        </div>
+      </Link>
+  )})
+  
+  return (
+    <div className={styles.portfolioContainer}>{blogs}</div>
+  );
+};
