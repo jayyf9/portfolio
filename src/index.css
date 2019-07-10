@@ -2,8 +2,6 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   width: 80%;

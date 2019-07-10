@@ -1,24 +1,20 @@
 .portfolioContainer {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 40px;
   min-width: 850px;
-  flex-wrap: wrap;
 
 }
 
 .portfolio {
+  width: 49%;  
   background-color: white;
-  margin: 6px;
-  padding: 6px;
-  width: 48%;  
   border-radius: 10px;
+  margin: 6px;
 }
 
-.portfolio:hover{ 
-  background-color: rgba(66, 140, 238, 0.7);
-  .siteTitle {
-    color: white;
-  }
+.portfolio:hover{
+  border: 3px solid rgb(120, 166, 226);
 } 
 
 .portfolioImageCover {

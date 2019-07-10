@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+import postCMS from './components/blog/posts/post-cms/post-cms';
+import newPost from './components/blog/posts/new-post/new-post';
+
 
 function App() {
   return (
@@ -34,6 +37,8 @@ function App() {
       <Route path="/portfolio" component={portfolio} />
       <Route path="/portfolioItem/:id" component={portfolioItem} />
       <Route path="/blog" component={blog} />
+      <Route path="/blogPost/0" component={postCMS} />
+      <Route path="/blogPost/1" component={newPost} />
     </Router>
   );
 }

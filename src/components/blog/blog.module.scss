@@ -1,34 +1,60 @@
 
-  .blog {
-    height: 430px;
+  .blogContainer {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
+    min-width: 850px;
+  }
+  .blog {
+    width: 49%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 6px;
+    position: relative;
     .blogImageCover {
-      width: 100%;
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
       text-align: center;
       height: 380px;
       overflow: hidden;
+      .blogImage {
+        width: 100%;
+      }
     }
     .blogTitle {
+      font-size: 25px;
+      padding-left: 20px;
       color: #039be5 !important;
+    }
+    .blogSummary {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      color: black;
+      height: 110px;
+    }
+    .readMore {
+      text-align: center;
+      font-size: 25px;
+      background-color: rgb(223, 223, 223);
+      width: 100%; 
+      height: 40px; 
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
   }
 
   .blog:hover {
+    background-color: rgb(198, 212, 230);
+    margin: 8px;
+    .blog {
     color: white;
-    background-color: rgba(66, 140, 238, 0.7)
+    }
+    .readMore {
+      background-color: gold !important;
+    }
   }
 
-  .readMore {
-    width: 100%; 
-    height: 40px; 
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
-  .readMore:hover {
-    background-color: gold !important;
-  }
-  .post {
-    margin-bottom: 50px;
+  a {
+    text-decoration: none;
   }

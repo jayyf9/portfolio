@@ -21,8 +21,8 @@ class Home extends React.Component {
   return (
     <div className="introContainer">
       <div className="row">
-        <div className="intro-text">
-          <h4>Hi, my Name is
+        <div className="introText">
+          <div>Hi, my Name is
             <span onMouseEnter={() => this.handleMouseHover('me')} onMouseLeave={() => this.handleMouseHover(this)} ><span className="img"> Jake! </span></span>
             { this.state.isHovering === 'me' ? <img className="tooltip" src={ require('./../../images/me.jpg') } /> : null }
             I am UX focussed
@@ -34,8 +34,8 @@ class Home extends React.Component {
             based in the
             <span onMouseEnter={() => this.handleMouseHover('amsterdam')} onMouseLeave={() => this.handleMouseHover(this)}><span className="img"> Netherlands</span></span>
             { this.state.isHovering === 'amsterdam' ? <img className="tooltip" src={ require('./../../images/amsterdam.jpg') } /> : null }
-            .</h4>
-            <div className="sub-intro-text">
+            .</div>
+            <div className="subIntroText">
               <h5>I work freelance so <Link to="/Portfolio" className="link">check out some of my work</Link> and if you are interested 
               <a href="mailto:jayyf9@gmail.com?Subject=Website%20query" className="link"> get in touch!</a></h5>
             </div>
