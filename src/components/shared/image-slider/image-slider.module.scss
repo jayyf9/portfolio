@@ -1,0 +1,61 @@
+.imageSliderContainer {
+    position: relative;
+    cursor: zoom-in;
+    height: 100%;
+    width: 100%;
+}
+
+.slideImage {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    left: 0px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+
+.arrowBox {
+    bottom: 10px;
+}
+
+.leftArrowBox {
+    position: relative;
+    float:left;
+    z-index: 2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.100);
+    width: 100px;
+    cursor: pointer;
+    .leftArrow {
+        top: 440px;
+        color: #039be5;;
+        left: 20px;
+        position: relative;
+        float: left;
+    }
+}
+.rightArrowBox {
+    position: relative;
+    float:right;
+    z-index: 2;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.100);
+    width: 100px;
+    cursor: pointer;
+    .rightArrow {
+        top: 440px;
+        color: #039be5;;
+        right: 20px;
+        position: relative;
+        float: right;
+    }
+}
+
+.dots {
+    z-index: 3;
+}

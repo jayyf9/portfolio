@@ -1,34 +1,22 @@
-
-.logo {
-  margin-top: 10px;
-}
-
-.navItems {
-  a {
-    color: #039be5;
-  }
-  font-size: 15px;
-  text-align: center;
-  font-weight: bold;
-  padding: 10px;
-  :hover{
-    color: gold;
-  }
-  .navLink {
-    text-decoration: none;
-    padding-right: 10px;
-    font-size: 25px;
-  }
-}
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 .headers {
   text-align: center;
 }
 
 .mainHeader {
-  font-size: 50px;
+  cursor: default;
+  font-size: 60px;
+  height: 100px;
+  margin: 50px;
   color: #039be5;
   text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 
 .subHeader {
@@ -36,6 +24,42 @@
   border-radius: 10px;
   padding: 2px;
 }
+
+.navItems {
+  a {
+    color: #039be5;
+  }
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+  .navLink {
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 25px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .navLink:hover{
+    font-weight: bold;
+    color: gold;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    font-size: 30px;
+  }
+  .navLinkSeperator {
+    cursor: default;
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 25px;
+  }
+}
+.isActive {
+  font-weight: bold !important;
+  font-size: 30px !important;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
 
 .contactNav {
   display: flex;
@@ -52,10 +76,41 @@
     padding: 5px;
     .icon {
       margin-top: 12px;
-      width: 30px;
     }
   }
   .contactButton:hover {
     background-color: gold !important;
   }
 }
+
+
+.page {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+}
+
+/* simple - enter transition 300ms, exit 150ms */
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 700ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity linear;
+}
+
+
+

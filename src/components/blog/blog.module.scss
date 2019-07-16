@@ -10,6 +10,7 @@
     background-color: white;
     border-radius: 10px;
     margin: 6px;
+    margin-bottom: 60px;
     position: relative;
     .blogImageCover {
       border-top-right-radius: 10px;
@@ -45,8 +46,7 @@
   }
 
   .blog:hover {
-    background-color: rgb(198, 212, 230);
-    margin: 8px;
+    border: 2px solid rgb(120, 166, 226);
     .blog {
     color: white;
     }

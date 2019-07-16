@@ -1,6 +1,8 @@
 import React from 'react';
 import blogData from "./../../blog-data";
 import styles from './post-cms.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 export default function postCMS({match}) {
   return (
@@ -44,5 +46,10 @@ export default function postCMS({match}) {
         <br />
         <h3>References:</h3>
         <i>https://w3techs.com/technologies/details/cm-wordpress/all/all</i>
+        <div className={styles.shareIcons}>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//localhost%3A3000/blogPost/0&title=&summary=&source="><FontAwesomeIcon className={styles.icon} size="3x" icon={faLinkedin} /></a>
+          <a href="https://twitter.com/home?status=http%3A//localhost%3A3000/blogPost/0"><FontAwesomeIcon className={styles.icon} size="3x" icon={faTwitter} /></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/blogPost/0"><FontAwesomeIcon className={styles.icon} size="3x" icon={faFacebook} /></a>
+        </div>
     </div>
   )};
