@@ -1,17 +1,27 @@
 .imageSliderContainer {
     position: relative;
     cursor: zoom-in;
-    height: 100%;
     width: 100%;
+    overflow: hidden;
+    margin: 40px;
+    -webkit-transition: opacity 4s ease-in-out;
+    -moz-transition: opacity 4s ease-in-out;
+    -o-transition: opacity 4s ease-in-out;
+    transition: opacity 4s ease-in-out;
 }
 
 .slideImage {
     position: absolute;
+    height: 100%;
     width: 100%;
-    height: 800px;
     left: 0px;
     border-radius: 20px;
     z-index: 1;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 
@@ -26,17 +36,25 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     height: 800px;
-    background-color: rgba(0, 0, 0, 0.100);
+    background-color: rgba(0, 0, 0, 0.05);
     width: 100px;
     cursor: pointer;
+    
     .leftArrow {
         top: 440px;
-        color: #039be5;;
+        color: rgb(164, 164, 164);
         left: 20px;
         position: relative;
         float: left;
     }
+}    
+.leftArrowBox:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    .leftArrow {
+        color: white;
+    }
 }
+
 .rightArrowBox {
     position: relative;
     float:right;
@@ -44,18 +62,53 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 800px;
-    background-color: rgba(0, 0, 0, 0.100);
+    background-color: rgba(0, 0, 0, 0.05);
     width: 100px;
     cursor: pointer;
     .rightArrow {
         top: 440px;
-        color: #039be5;;
+        color: rgb(164, 164, 164);
         right: 20px;
         position: relative;
         float: right;
     }
 }
+.rightArrowBox:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    .rightArrow {
+        color: white;   
+    }
+}
 
 .dots {
-    z-index: 3;
+    position: relative;
+    padding: 10px;
+    top: 760px;
+    left: 35%;
+    z-index: 4;
+    color: rgb(164, 164, 164);
+    cursor: pointer;
+}
+
+.dotsSelected {
+    position: relative;
+    padding: 10px;
+    top: 760px;
+    left: 35%;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.nums {
+    z-index: 5;    
+}
+
+.imageSliderContainer img.hidden {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 0;
 }
