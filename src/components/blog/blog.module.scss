@@ -32,7 +32,7 @@
       padding-right: 20px;
       padding-bottom: 10px;
       color: black;
-      height: 110px;
+      height: 150px;
     }
     .readMore {
       text-align: center;
@@ -53,6 +53,12 @@
     .readMore {
       background-color: gold !important;
     }
+  }
+
+  .date {
+    color: gray;
+    font-style: italic;
+    float: right;
   }
 
   a {

@@ -9,10 +9,10 @@ var blogData = [{
     {
       "id": 1,
       "date": '1st September 2020',
-      "title": "Test blog",
-      "img": require("../../images/blog-posts/cms/cms.jpg"),
-      "tagLine": "This is a tagline",
-      "summary": "This is the posts summary.",
+      "title": "Allow myself to introduce.. myself",
+      "img": require("../../images/me.jpg"),
+      "tagLine": "Who, what, why?",
+      "summary": "Short post about who I am and what my goals are with this website/blog.",
     }
 ]
 

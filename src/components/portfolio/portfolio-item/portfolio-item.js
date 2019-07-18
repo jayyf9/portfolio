@@ -10,24 +10,21 @@ export default function PortfolioItem({match}) {
       <div className={styles.portfolioItem}>
         <h3 className={styles.siteTitle}>{portfolioData[match.params.id].title}</h3>
         <div className={styles.siteInformation}>
-          <div className={styles.siteDescription}>
-            <b className={styles.sectionTitle}>Description:</b>
-            <p>{portfolioData[match.params.id].description}</p>
-          </div>
-          <div className={styles.siteClient}>
-            <b className={styles.sectionTitle}>Client:</b><br /><br />
-            <img alt="site-client" className={styles.siteClientImage} src={portfolioData[match.params.id].client} />
-          </div>
-          <div>
-            <b className={styles.sectionTitle}>Skills/Tools:</b>
-            {portfolioData[match.params.id].skills.map(skill => {
-              return (
-                <div className={styles.siteSkills}><FontAwesomeIcon icon={skill.icon} />{skill.title}</div>
-              )
-            })}
-          </div>
-          </div>
-          <ImageSlider website={match.params.id} />
+            <div className={styles.siteDescription}>
+              <p>{portfolioData[match.params.id].description}</p>
+            </div>
+            <div>
+              {portfolioData[match.params.id].skills.map(skill => {
+                return (
+                  <div className={styles.siteSkills}><FontAwesomeIcon size="2x" icon={skill.icon} /><div className={styles.skillTitle}>{skill.title}</div></div>
+                )
+              })}
+            </div>
+            <div className={styles.siteClient}>
+              <img alt="site-client" className={styles.siteClientImage} src={portfolioData[match.params.id].client} />
+            </div>
+        </div>
+        <ImageSlider className={styles.ImageSlider} website={match.params.id} />
       </div>
         )
       }
