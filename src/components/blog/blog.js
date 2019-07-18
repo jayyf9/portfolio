@@ -14,8 +14,8 @@ export default function Blog() {
         <div className={styles.blogSummary}>
             <h3>{blog.tagLine}</h3>
             <p>{blog.summary}<span>.....</span></p>
-          	<span className={styles.date}>{blog.date}</span>        
         </div>
+        <div className={styles.date}>{blog.date}</div>        
         <div className={styles.readMore}>Read More..</div>
       </Link>
   )})

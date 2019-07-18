@@ -7,21 +7,24 @@
 }
 
 .portfolio {
-  width: 49%;  
+  width: 47%;  
   background-color: white;
   border-radius: 10px;
-  margin: 6px;
+  margin: 14px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .portfolio:hover{
-  border: 2px solid rgb(120, 166, 226);
+  -webkit-box-shadow: 0px 0px 19px 5px rgba(120, 166, 226,0.8);
+  -moz-box-shadow: 0px 0px 19px 5px rgba(120, 166, 226,0.8);
+  box-shadow: 0px 0px 19px 5px rgba(120, 166, 226, 0.8);
 } 
 
 .portfolioImageCover {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   text-align: center;
-  height: 380px;
+  height: 420px;
   overflow: hidden;
   .siteCover {
     width: 100%;
@@ -36,8 +39,9 @@
     color: #039be5;
   }
   .siteClient {
-    width:140px;
-    float:right; 
+    width:120px;
+    float:right;
+    margin: 10px;
   }
 }
 a {
