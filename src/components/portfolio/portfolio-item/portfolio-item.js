@@ -8,7 +8,7 @@ import ImageSlider from '../../shared/image-slider/image-slider.js';
 export default function PortfolioItem({match}) {
     return (
       <div className={styles.portfolioItem}>
-        <h3 className={styles.siteTitle}>{portfolioData[match.params.id].title}</h3>
+        <h3 className={styles.title}>{portfolioData[match.params.id].title}</h3>
         <div className={styles.siteInformation}>
             <div className={styles.siteDescription}>
               <p>{portfolioData[match.params.id].description}</p>
@@ -16,7 +16,7 @@ export default function PortfolioItem({match}) {
             <div>
               {portfolioData[match.params.id].skills.map(skill => {
                 return (
-                  <div className={styles.siteSkills}><FontAwesomeIcon size="2x" icon={skill.icon} /><div className={styles.skillTitle}>{skill.title}</div></div>
+                  <div className={styles.siteSkills}><FontAwesomeIcon size="lg" icon={skill.icon} /><div className={styles.skillTitle}>{skill.title}</div></div>
                 )
               })}
             </div>

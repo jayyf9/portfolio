@@ -7,36 +7,31 @@
 
 .mainHeader {
   cursor: default;
-  font-size: 60px;
-  height: 100px;
-  margin: 50px;
+  font-size: 40px;
+  height: 70px;
   color: #039be5;
   text-decoration: none;
   font-weight: bold;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  transition: all .5s ease;
-  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 
 .subHeader {
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 10px;
   padding: 2px;
+  height: 100px;
 }
 
 .navItems {
   a {
     color: #039be5;
   }
-  height: 40px;
-  font-size: 15px;
+  height: 20px;
   text-align: center;
   padding: 10px;
   .navLink {
     text-decoration: none;
     padding-right: 10px;
-    font-size: 25px;
+    font-size: 17px;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     transition: all .5s ease;
@@ -45,7 +40,7 @@
     font-weight: bold;
     color: gold;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
-    font-size: 30px;
+    font-size: 25px;
   }
   .navLinkSeperator {
     cursor: default;
@@ -56,24 +51,24 @@
 }
 .isActive {
   font-weight: bold !important;
-  font-size: 30px !important;
+  font-size: 25px !important;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
 
 
 .contactNav {
   display: flex;
-  margin-top: -10px;
-  width: 340px;
+  margin-top: -6px;
+  width: 260px;
   .contactButton {
     background-color: rgb(66, 140, 238);
     text-align: center;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
     flex: 1;
     color: white;
-    margin-top: -4px;
-    padding: 5px;
+    margin-top: -5px;
+    padding: 2px;
     .icon {
       margin-top: 12px;
     }

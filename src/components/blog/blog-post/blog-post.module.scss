@@ -1,0 +1,43 @@
+.title {
+    color: #039be5;
+    font-size: 35px;
+}
+
+.post {
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 20px;
+}
+
+.shareIcons {
+    float: left;
+}
+
+.icon {
+    padding: 6px;
+    color: rgb(66, 140, 238);
+}
+
+.responsiveImg {
+    position: relative;
+    margin: 10px;
+    width: 1000px;
+    right: 160px;
+    border-radius: 10px;
+}
+
+.postQuote {
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    color: gray;
+    font-style: italic;
+    text-align: right;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}

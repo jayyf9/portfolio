@@ -24,7 +24,7 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   text-align: center;
-  height: 420px;
+  height: 320px;
   overflow: hidden;
   .siteCover {
     width: 100%;
@@ -32,18 +32,18 @@
 }
 
 .siteContent {
-  height: 60px;
-  padding: 15px;
+  display: flex;
+  padding: 10px;
   .siteTitle {
-    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    flex: 1;
+    font-size: 26px;
     color: #039be5;
   }
   .siteClient {
-    width:120px;
-    float:right;
-    margin: 10px;
+    max-height: 50px;
+    max-width: 160px;
+    margin: 5px;
   }
-}
-a {
-  text-decoration: none;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import styles from  './home.module.scss';
 import { Link } from "react-router-dom";
 
 class Home extends React.Component {
@@ -19,25 +19,25 @@ class Home extends React.Component {
 
   render() {
   return (
-    <div className="introContainer">
-      <div className="row">
-        <div className="introText">
+    <div className={styles.introContainer}>
+      <div className={styles.row}>
+        <div className={styles.introText}>
           <div>Hi, my Name is
-            <span onMouseEnter={() => this.handleMouseHover('me')} onMouseLeave={() => this.handleMouseHover(this)} ><span className="img"> Jake! </span></span>
-            { this.state.isHovering === 'me' ? <img className="tooltip" src={ require('./../../images/me.jpg') } /> : null }
+            <span onMouseEnter={() => this.handleMouseHover('me')} onMouseLeave={() => this.handleMouseHover(this)} ><span className={styles.img}> Jake! </span></span>
+            { this.state.isHovering === 'me' ? <img className={styles.tooltip} src={ require('./../../images/me.jpg') } /> : null }
             I am UX focussed
-            <span onMouseEnter={() => this.handleMouseHover('design')} onMouseLeave={() => this.handleMouseHover(this)}><span className="img"> Web designer </span></span>
-            { this.state.isHovering === 'design' ? <img className="tooltip" src={ require('./../../images/design.jpg') } /> : null }
+            <span onMouseEnter={() => this.handleMouseHover('design')} onMouseLeave={() => this.handleMouseHover(this)}><span className={styles.img}> Web designer </span></span>
+            { this.state.isHovering === 'design' ? <img className={styles.tooltip} src={ require('./../../images/design.jpg') } /> : null }
             and
-            <span onMouseEnter={() => this.handleMouseHover('code')} onMouseLeave={() => this.handleMouseHover(this)}><span className="img"> developer </span></span>
-            { this.state.isHovering === 'code' ? <img className="tooltip" src={ require('./../../images/code.jpg') } /> : null }
+            <span onMouseEnter={() => this.handleMouseHover('code')} onMouseLeave={() => this.handleMouseHover(this)}><span className={styles.img}> developer </span></span>
+            { this.state.isHovering === 'code' ? <img className={styles.tooltip} src={ require('./../../images/code.jpg') } /> : null }
             based in the
-            <span onMouseEnter={() => this.handleMouseHover('amsterdam')} onMouseLeave={() => this.handleMouseHover(this)}><span className="img"> Netherlands</span></span>
-            { this.state.isHovering === 'amsterdam' ? <img className="tooltip" src={ require('./../../images/amsterdam.jpg') } /> : null }
+            <span onMouseEnter={() => this.handleMouseHover('amsterdam')} onMouseLeave={() => this.handleMouseHover(this)}><span className={styles.img}> Netherlands</span></span>
+            { this.state.isHovering === 'amsterdam' ? <img className={styles.tooltip} src={ require('./../../images/amsterdam.jpg') } /> : null }
             .</div>
-            <div className="subIntroText">
-              <h5>I work freelance so <Link to="/Portfolio" className="link">check out some of my work</Link> and if you are interested 
-              <a href="mailto:jayyf9@gmail.com?Subject=Website%20query" className="link"> get in touch!</a></h5>
+            <div className={styles.subIntroText}>
+              <h5>I work freelance so <Link to="/Portfolio" className={styles.link}>check out some of my work</Link> and if you are interested 
+              <a href="mailto:jayyf9@gmail.com?Subject=Website%20query" className={styles.link}> get in touch!</a></h5>
             </div>
         </div>
       </div>

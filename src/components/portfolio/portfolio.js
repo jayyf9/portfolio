@@ -11,7 +11,7 @@ export default function Portfolio() {
             <img alt="site cover" className={styles.siteCover} src={website.img} />
           </div>
           <div className={styles.siteContent}>
-            <span className={styles.siteTitle}>{website.title}</span>
+            <div className={styles.siteTitle}>{website.title}</div>
             <img className={styles.siteClient} alt="site client" src={website.client} />
           </div>
       </Link>

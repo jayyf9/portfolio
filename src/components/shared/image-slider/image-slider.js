@@ -47,10 +47,10 @@ export default class ImageSlider extends React.Component {
         <div className={styles.imageSliderContainer}>
           <img className={styles.slideImage} alt="site cover" src={portfolioData[this.props.website].siteImages[this.state.sliderNum]} draggable="false" />
           <div className={styles.leftArrowBox} onClick={this.prevImg}>
-            <FontAwesomeIcon className={styles.leftArrow} icon={faArrowCircleLeft} size="3x" />
+            <FontAwesomeIcon className={styles.leftArrow} icon={faArrowCircleLeft} size="2x" />
           </div>
           <div className={styles.rightArrowBox} onClick={this.nextImg}>
-            <FontAwesomeIcon className={styles.rightArrow} icon={faArrowCircleRight} size="3x" />
+            <FontAwesomeIcon className={styles.rightArrow} icon={faArrowCircleRight} size="2x" />
           </div>
           {icons}
         </div>

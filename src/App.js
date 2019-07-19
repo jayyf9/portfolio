@@ -12,8 +12,7 @@ import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
-import postCMS from './components/blog/posts/post-cms/post-cms';
-import newPost from './components/blog/posts/new-post/new-post';
+import blogPost from './components/blog/blog-post/blog-post';
 
 
 function App() {
@@ -21,13 +20,13 @@ function App() {
     <Router>
       <div className="contactNav">
         <a className="contactButton" href="mailto:jayyf9@gmail.com?Subject=Website%20query">
-          <FontAwesomeIcon className="icon" size="lg" icon={faEnvelope} />
+          <FontAwesomeIcon className="icon" icon={faEnvelope} />
         </a>&nbsp;
         <a className="contactButton" href="https://twitter.com/Jayyf9">
-          <FontAwesomeIcon className="icon" size="lg" icon={faTwitter} />
+          <FontAwesomeIcon className="icon" icon={faTwitter} />
         </a>&nbsp;
         <a className="contactButton" href="https://www.linkedin.com/in/jake-french-200a0462/">
-          <FontAwesomeIcon className="icon" size="lg" icon={faLinkedin} />
+          <FontAwesomeIcon className="icon" icon={faLinkedin} />
         </a>&nbsp;
       </div>
       <div className="headers">
@@ -35,11 +34,11 @@ function App() {
         <span className="subHeader">Frontend Developer - UX Designer - Backend Developer</span>
       </div>
       <div className="navItems">
-          <NavLink className="navLink" activeClassName="isActive" to="/home">Home</NavLink >
+          <NavLink className="navLink" activeClassName="isActive" to="/home">HOME</NavLink >
           <span className="navLinkSeperator">-</span>
-          <NavLink className="navLink" activeClassName='isActive' to="/portfolio">Portfolio</NavLink >
+          <NavLink className="navLink" activeClassName='isActive' to="/portfolio">PORTFOLIO</NavLink >
           <span className="navLinkSeperator">-</span>
-          <NavLink className="navLink" activeClassName='isActive' to="/blog">Blog</NavLink >
+          <NavLink className="navLink" activeClassName='isActive' to="/blog">BLOG</NavLink >
       </div>
       <Route render={({location}) => (
       <TransitionGroup>
@@ -50,8 +49,7 @@ function App() {
           <Route path="/portfolio" component={portfolio} />
           <Route path="/portfolioItem/:id" component={portfolioItem} />
           <Route path="/blog" component={blog} />
-          <Route path="/blogPost/0" component={postCMS} />
-          <Route path="/blogPost/1" component={newPost} />
+          <Route path="/blogPost/:id" component={blogPost} />
         </Switch>
     </CSSTransition>
     </TransitionGroup>
