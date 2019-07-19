@@ -45,12 +45,13 @@
       bottom:0;
       height: 40px; 
       text-align: center;
-      background-color: rgb(223, 223, 223);
+      background-color: rgba(223, 223, 223, 0.7);
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       .readMoreText {
         padding-top: 5px;
         font-size: 20px;
+        color: #039be5;
       }
     }
   }
@@ -59,12 +60,6 @@
     -webkit-box-shadow: 0px 0px 19px 5px rgba(120, 166, 226,0.8);
     -moz-box-shadow: 0px 0px 19px 5px rgba(120, 166, 226,0.8);
     box-shadow: 0px 0px 19px 5px rgba(120, 166, 226, 0.8);
-    .readMoreText {
-      color: gold !important;
-    }
-    .readMoreButton {
-      background-color: #039ae58f !important;
-    }
   }
 
   .date {

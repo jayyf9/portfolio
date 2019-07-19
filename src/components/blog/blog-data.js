@@ -16,7 +16,7 @@ var blogData = [{
       "section5Header": "",
       "section5": "There are many CMS’s available today, all with various pros and cons. The most widely used however is WordPress. This dominates the CMS market being used by 59.9% of all known CMS websites (and there is a lot). It also accounts for a whopping 31.7% of all websites! (W3Techs.com, 1 September 2018)",
       "conclusion": "Yes! CMS are a great addition to a developers toolkit, but its important that a developer knows when and where to use them as using the wrong tool for the job can lead to further scalability issues down the line.",
-      "references": "https://w3techs.com/technologies/details/cm-wordpress/all/all",
+      "references": "https://w3techs.com/technologies/details/cm-wordpress/all/all"
     }
 ]
 
