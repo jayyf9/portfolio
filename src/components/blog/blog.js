@@ -3,17 +3,46 @@ import blogData from "./blog-data";
 import styles from './blog.module.scss';
 import { Link } from "react-router-dom";
 
-export default function Blog() {
-  const blogs = blogData.map(blog => {
-  return (
+export default class Blog extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { 
+      blogDataFiltered: blogData
+     };
+  }
+  
+  searchPosts = (event) => {
+    this.setState({
+      blogDataFiltered: []
+    })
+    const blogsMatchingSearch = []; 
+    blogData.some(blog => {
+      if(blog.title.toLowerCase().includes(event.target.value.toLowerCase())) {
+        blogsMatchingSearch.push(blog)
+        this.setState({
+          blogDataFiltered: blogsMatchingSearch
+        })
+      }
+    });
+    if(event.target.value === "") {
+      this.setState({
+        blogDataFiltered: blogData
+      })
+    } 
+  }
+  
+  render() {
+    const blogs = this.state.blogDataFiltered.map(blog => {
+    return (
       <Link className={styles.blog} to={'/blogPost/' + blog.id}>
         <div className={styles.blogInfo}>
           <div className={styles.headers}>
             <div className={styles.title}>{blog.title} </div>
-            <div className={styles.tagLine}>{blog.tagLine}</div>
+            <div className={styles.subTitle}>{blog.subTitle}</div>
           </div>
           <div className={styles.blogImageCover}>
-            <img className={styles.blogImage} alt="" src={blog.img} />
+            <img className={styles.blogImage} alt="" src={blog.postImage} />
           </div>
         </div>
         <div className={styles.date}>{blog.date}</div>        
@@ -21,9 +50,13 @@ export default function Blog() {
           <div className={styles.readMoreText}>Read More..</div>
         </div>
       </Link>
-  )})
+    )})
   
   return (
-    <div className={styles.blogContainer}>{blogs}</div>
+    <div className={styles.blogHeader}>
+      <div className={styles.search}>Search:<input className={styles.searchInput} onChange={this.searchPosts.bind(this)}></input></div>
+      <div className={styles.blogContainer}>{blogs}</div>
+    </div>
   );
+  }
 };

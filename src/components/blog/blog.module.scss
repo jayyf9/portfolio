@@ -2,8 +2,22 @@
   .blogContainer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 10px;
   }
+
+  .search {
+    margin-left: 20px;
+  }
+
+  .searchInput {
+    border-radius: 5px;
+    height: 25px;
+    width: 165px;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
   .blog {
     min-height: 230px;
     width: 570px;
@@ -22,7 +36,7 @@
         padding-bottom: 10px;
         color: #039be5 !important;
       }
-      .tagLine {
+      .subTitle {
         width: 320px;
         font-size: 14px;
         padding-left: 20px;

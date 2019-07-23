@@ -20,7 +20,6 @@ class Home extends React.Component {
   render() {
   return (
     <div className={styles.introContainer}>
-      <div className={styles.row}>
         <div className={styles.introText}>
           <div>Hi, my Name is
             <span onMouseEnter={() => this.handleMouseHover('me')} onMouseLeave={() => this.handleMouseHover(this)} ><span className={styles.img}> Jake! </span></span>
@@ -32,15 +31,13 @@ class Home extends React.Component {
             <span onMouseEnter={() => this.handleMouseHover('code')} onMouseLeave={() => this.handleMouseHover(this)}><span className={styles.img}> developer </span></span>
             { this.state.isHovering === 'code' ? <img className={styles.tooltip} src={ require('./../../images/code.jpg') } /> : null }
             based in the
-            <span onMouseEnter={() => this.handleMouseHover('amsterdam')} onMouseLeave={() => this.handleMouseHover(this)}><span className={styles.img}> Netherlands</span></span>
-            { this.state.isHovering === 'amsterdam' ? <img className={styles.tooltip} src={ require('./../../images/amsterdam.jpg') } /> : null }
-            .</div>
+            <span onMouseEnter={() => this.handleMouseHover('amsterdam')} onMouseLeave={() => this.handleMouseHover(this)}>{ this.state.isHovering === 'amsterdam' ? <img className={styles.tooltip} src={ require('./../../images/amsterdam.jpg') } /> : null }<span className={styles.img}> Netherlands.</span></span>
+          </div>
             <div className={styles.subIntroText}>
               <h5>I work freelance so <Link to="/Portfolio" className={styles.link}>check out some of my work</Link> and if you are interested 
               <a href="mailto:jayyf9@gmail.com?Subject=Website%20query" className={styles.link}> get in touch!</a></h5>
             </div>
         </div>
-      </div>
     </div>
   );
   }

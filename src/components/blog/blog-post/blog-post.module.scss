@@ -20,7 +20,7 @@
     color: rgb(66, 140, 238);
 }
 
-.responsiveImg {
+.postImage {
     position: relative;
     margin: 10px;
     width: 1000px;
@@ -28,8 +28,23 @@
     border-radius: 10px;
 }
 
+.imageCaption {
+    color: gray;
+    font-style: italic;
+    text-align: center;
+    margin-top: -10px;
+}
+
 .postQuote {
     text-align: center;
+}
+
+.tagsHeader {
+    font-weight: bold;
+}
+
+.tags {
+font-style: italic;
 }
 
 .footer {

@@ -1,7 +1,9 @@
 import React from "react";
 import portfolioData from "./portfolio-data";
 import styles from "./portfolio.module.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "react-router-dom";
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default function Portfolio() {
   const websites = portfolioData.map(website => {

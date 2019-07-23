@@ -35,9 +35,9 @@ function App() {
       </div>
       <div className="navItems">
           <NavLink className="navLink" activeClassName="isActive" to="/home">HOME</NavLink >
-          <span className="navLinkSeperator">-</span>
+          <span className="navLinkSeperator">|</span>
           <NavLink className="navLink" activeClassName='isActive' to="/portfolio">PORTFOLIO</NavLink >
-          <span className="navLinkSeperator">-</span>
+          <span className="navLinkSeperator">|</span>
           <NavLink className="navLink" activeClassName='isActive' to="/blog">BLOG</NavLink >
       </div>
       <Route render={({location}) => (
