@@ -26,7 +26,8 @@ var portfolioData = [
             {
                 "icon": faAngular,
                 "title": "Angular"
-        }]
+        }],
+        "locked": false
     },
     {
     "id": 1,
@@ -53,7 +54,8 @@ var portfolioData = [
             "icon": faNodeJs,
             "title": "NodeJS"
         }
-    ]
+    ],
+    "locked": true
 },
 {
     "id": 2,
@@ -77,7 +79,8 @@ var portfolioData = [
             "icon": faNodeJs,
             "title": "NodeJS"
         }
-    ]
+    ],
+    "locked": true
 },
 {
     "id": 3,
@@ -101,7 +104,8 @@ var portfolioData = [
         {
             "icon": faPhp,
             "title": "PHP"
-    }]
+    }],
+    "locked": false
 }
 ]
 

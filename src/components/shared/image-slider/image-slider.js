@@ -10,8 +10,6 @@ export default class ImageSlider extends React.Component {
       this.state = { sliderNum: 0 };
     }
 
-
-
     prevImg = () => {
       if(this.state.sliderNum <= 0) { // Check if at start of images and roll over to end of true.
         this.setState({ sliderNum: portfolioData[this.props.website].siteImages.length - 1}); 
