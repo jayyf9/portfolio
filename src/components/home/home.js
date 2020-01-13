@@ -1,13 +1,38 @@
 import React from 'react';
 import styles from  './home.module.scss';
 import { Link } from "react-router-dom";
-
+import Intro from '../intro/intro';
+import Portfolio from '../portfolio/portfolio';
+import Blog from '../blog/blog';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { animateScroll as scroll } from 'react-scroll'
+ 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      isHovering: false
+      isHovering: false,
+      topOfPage: false
      };
+  }
+
+  componentDidMount() {
+    window.onscroll = () => {
+      if(window.pageYOffset !== 0) {
+        this.setState({
+          topOfPage: true
+        });
+      } else {
+        this.setState({
+          topOfPage: false
+        });
+      }
+    };
+  }
+  
+  componentWillUnmount() {
+    window.onscroll = null;
   }
   
   handleMouseHover = (img) => {
@@ -17,28 +42,39 @@ class Home extends React.Component {
     });
   }
 
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  }
+
   render() {
+    let scrollToTopIcon
+    if (this.state.topOfPage === true) {
+      scrollToTopIcon = <div onClick={this.scrollToTop.bind(this)}>
+        <FontAwesomeIcon className={styles.scrollUp} icon={faChevronCircleUp} size="3x" />
+      </div>
+    }
+
   return (
-    <div className={styles.introContainer}>
-        <div className={styles.introText}>
-          <div>Hi, my Name is
-            <span onMouseEnter={() => this.handleMouseHover('me')} onMouseLeave={() => this.handleMouseHover(this)} ><span className={styles.img}> Jake! </span></span>
-            { this.state.isHovering === 'me' ? <img className={styles.tooltip} src={ require('./../../images/me.jpg') } /> : null }
-            I am UX focussed
-            <span onMouseEnter={() => this.handleMouseHover('design')} onMouseLeave={() => this.handleMouseHover(this)}><span className={styles.img}> Web designer </span></span>
-            { this.state.isHovering === 'design' ? <img className={styles.tooltip} src={ require('./../../images/design.jpg') } /> : null }
-            and
-            <span onMouseEnter={() => this.handleMouseHover('code')} onMouseLeave={() => this.handleMouseHover(this)}><span className={styles.img}> developer </span></span>
-            { this.state.isHovering === 'code' ? <img className={styles.tooltip} src={ require('./../../images/code.jpg') } /> : null }
-            based in the
-            <span onMouseEnter={() => this.handleMouseHover('amsterdam')} onMouseLeave={() => this.handleMouseHover(this)}>{ this.state.isHovering === 'amsterdam' ? <img className={styles.tooltip} src={ require('./../../images/amsterdam.jpg') } /> : null }<span className={styles.img}> Netherlands.</span></span>
-          </div>
-            <div className={styles.subIntroText}>
-              <h5>I work freelance so <Link to="/Portfolio" className={styles.link}>check out some of my work</Link> and if you are interested 
-              <a href="mailto:jayyf9@gmail.com?Subject=Website%20query" className={styles.link}> get in touch!</a></h5>
-            </div>
+    <div>
+        {scrollToTopIcon}
+        <Intro/>
+
+        <div className={styles.portfolioSection}>
+          <div className={styles.mainHeader}>Project Portfolio</div>
+          <Portfolio/>
         </div>
+
+        <div className={styles.blogSection}>
+          <div className={styles.mainHeader}>Blog</div>
+          <Blog/>
+
+        </div>
+        <br/>
+        <br/>
+        <div className={styles.closingStatement}>Like what you see? You can get in touch by clicking <a href="mailto:jayyf9@gmail.com?Subject=Website%20query" className={styles.link}> HERE!</a></div>
     </div>
+
+
   );
   }
 }

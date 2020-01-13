@@ -1,0 +1,45 @@
+.introText {
+    margin-top: 20%;
+    margin-bottom: 80px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 500px;
+    color: white;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: black;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.subIntroText {
+    font-size: 20px;
+}
+
+.link {
+    cursor: pointer;
+    color: #039be5;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: gold
+}
+
+.img:hover {
+    color: gold;
+}
+
+.img {
+    color: #039be5;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tooltip {
+    position: absolute;
+    border-radius: 10px;
+    width: 300px;
+    height: 250px;
+}

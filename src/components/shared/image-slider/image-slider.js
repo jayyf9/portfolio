@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./image-slider.module.scss";
 import portfolioData from "./../../portfolio/portfolio-data";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleRight, faArrowCircleLeft, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default class ImageSlider extends React.Component {
     constructor() {
@@ -42,15 +42,18 @@ export default class ImageSlider extends React.Component {
       })
 
       return (
-        <div className={styles.imageSliderContainer}>
-          <img className={styles.slideImage} alt="site cover" src={portfolioData[this.props.website].siteImages[this.state.sliderNum]} draggable="false" />
-          <div className={styles.leftArrowBox} onClick={this.prevImg}>
-            <FontAwesomeIcon className={styles.leftArrow} icon={faArrowCircleLeft} size="2x" />
+        <div className={styles.imageSliderContainerContainer}>   
+          <div className={styles.imageSliderContainer}>
+            <img className={styles.slideImage} alt="site cover" src={portfolioData[this.props.website].siteImages[this.state.sliderNum]} draggable="false" />
+            <div className={styles.leftArrowBox} onClick={this.prevImg}>
+              <FontAwesomeIcon className={styles.leftArrow} icon={faChevronLeft} size="2x" />
+            </div>
+            <div className={styles.rightArrowBox} onClick={this.nextImg}>
+              <FontAwesomeIcon className={styles.rightArrow} icon={faChevronRight} size="2x" />
+            </div>
+            {icons}
           </div>
-          <div className={styles.rightArrowBox} onClick={this.nextImg}>
-            <FontAwesomeIcon className={styles.rightArrow} icon={faArrowCircleRight} size="2x" />
-          </div>
-          {icons}
+          <div className={styles.imageDescription}>{portfolioData[this.props.website].imageDescriptions[this.state.sliderNum]}</div>
         </div>
     );
   }

@@ -1,6 +1,13 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+body {
+  background-image: url("../src/assets/background.jpg"), url("../src/assets/portfolio-background.jpg");
+  background-repeat: no-repeat, repeat-y;
+  background-color: #cccccc;
+  background-size: 100% 27%;
+}
+
 .headers {
   text-align: center;
 }
@@ -9,7 +16,7 @@
   cursor: default;
   font-size: 40px;
   height: 70px;
-  color: #006ba0;
+  color: #0093dd;
   text-decoration: none;
   font-weight: bold;
 }
@@ -17,6 +24,7 @@
 .subHeader {
   font-size: 16px;
   border-radius: 10px;
+  color: white;
   padding: 2px;
   height: 100px;
 }
@@ -107,5 +115,16 @@
     transition: opacity linear;
 }
 
+.buttonWrapper{
+  text-align: center;
+  }
 
 
+  @media only screen and (max-width: 1400px) {
+    body {
+      background-image: url("../src/assets/background.jpg"), url("../src/assets/portfolio-background.jpg");
+      background-repeat: no-repeat, repeat-y;
+      background-color: #cccccc;
+      background-size: 100% 17%;
+    }
+  }

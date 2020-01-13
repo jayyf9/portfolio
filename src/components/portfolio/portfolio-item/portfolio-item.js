@@ -3,9 +3,11 @@ import portfolioData from "./../portfolio-data.js";
 import styles from './portfolio-item.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ImageSlider from '../../shared/image-slider/image-slider.js';
-
+import { Redirect } from 'react-router-dom'
 
 export default function PortfolioItem({match}) {
+  let loggedIn = sessionStorage.getItem('loggedIn');
+  if(portfolioData[match.params.id].locked !== true || loggedIn === "true") {
     return (
       <div className={styles.portfolioItem}>
         <h3 className={styles.title}>{portfolioData[match.params.id].title}</h3>
@@ -27,4 +29,7 @@ export default function PortfolioItem({match}) {
         <ImageSlider className={styles.ImageSlider} website={match.params.id} />
       </div>
         )
-      }
+  } else {
+    return <Redirect to='/portfolio' />
+  }
+}

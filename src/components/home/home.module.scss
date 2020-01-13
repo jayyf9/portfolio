@@ -1,40 +1,35 @@
-.introText {
-    margin-top: 170px;
-    margin-bottom: 80px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    overflow: hidden;
-    font-size: 25px;
+.mainHeader {
+    margin-left: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #039be5;
 }
 
-.subIntroText {
-    font-size: 20px;
+.portfolioSection {
+    margin-bottom: 250px;
+}
+
+.scrollUp {
+    cursor: pointer;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    position: fixed;
+}
+
+.closingStatement {
+    margin-top: 250px;
+    margin-bottom: 200px;
+    text-align: center;
+    margin-left: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
 }
 
 .link {
-    cursor: pointer;
     color: #039be5;
-    text-decoration: none;
 }
-
 .link:hover {
     color: gold
-}
-
-.img:hover {
-    color: gold;
-}
-
-.img {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.tooltip {
-    position: absolute;
-    border-radius: 10px;
-    width: 300px;
-    height: 250px;
 }

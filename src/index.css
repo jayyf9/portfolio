@@ -7,8 +7,5 @@ body {
   width: 80%;
   margin: auto;
   min-height: 100vh;
-  background-image: url("../src/assets/background.jpg");
-  background-color: #cccccc;
-  background-size: cover;
-  background-repeat: no-repeat; /* Do not repeat the image */
+
 }

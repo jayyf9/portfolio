@@ -15,7 +15,8 @@ import {
 import blogPost from './components/blog/blog-post/blog-post';
 
 
-function App() {
+class App extends React.Component {
+  render(){
   return (
     <Router>
       <div className="contactNav">
@@ -56,6 +57,7 @@ function App() {
     )} />
     </Router>
   );
+  }
 }
 
 export default App;

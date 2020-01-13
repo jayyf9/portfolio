@@ -8,8 +8,16 @@ export default class Blog extends React.Component {
     super(props);
 
     this.state = { 
-      blogDataFiltered: blogData
+      blogDataFiltered: blogData, isBlogPage: false 
      };
+  }
+
+  componentDidMount() {
+    if(window.location.pathname === "/home") {
+      this.setState({  
+        isBlogPage: true
+      });
+    };
   }
   
   searchPosts = (event) => {
@@ -37,25 +45,28 @@ export default class Blog extends React.Component {
     return (
       <Link className={styles.blog} to={'/blogPost/' + blog.id}>
         <div className={styles.blogInfo}>
-          <div className={styles.headers}>
-            <div className={styles.title}>{blog.title} </div>
-            <div className={styles.subTitle}>{blog.subTitle}</div>
-          </div>
+          <div className={styles.title}>{blog.title} </div><br/>
+          <div className={styles.subTitle}>{blog.subTitle}</div>        
           <div className={styles.blogImageCover}>
             <img className={styles.blogImage} alt="" src={blog.postImage} />
           </div>
-        </div>
-        <div className={styles.date}>{blog.date}</div>        
-        <div className={styles.readMoreButton}>
-          <div className={styles.readMoreText}>Read More..</div>
         </div>
       </Link>
     )})
   
   return (
     <div className={styles.blogHeader}>
-      <div className={styles.search}>Search:<input className={styles.searchInput} onChange={this.searchPosts.bind(this)}></input></div>
+      {/* <div className={styles.search}>Search:<input className={styles.searchInput} onChange={this.searchPosts.bind(this)}></input></div> */}
       <div className={styles.blogContainer}>{blogs}</div>
+      {this.state.isBlogPage ?  
+      <div class="buttonWrapper">
+        <Link className={styles.blog} to={'/blog/'}><button className={styles.viewMoreButton}>View More</button></Link>
+      </div>
+      : null
+      }
+      <div class="buttonWrapper">
+
+      </div>
     </div>
   );
   }

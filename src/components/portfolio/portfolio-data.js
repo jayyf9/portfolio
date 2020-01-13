@@ -18,6 +18,16 @@ var portfolioData = [
             require("../../images/portfolio-items/factory-of-the-future/fotf7.png"),
             require("../../images/portfolio-items/factory-of-the-future/fotf8.png")
         ],
+        "imageDescriptions": [
+            "This is a description 1",
+            "This is a description 2",
+            "This is a description 3",
+            "This is a description 4",
+            "This is a description 5",
+            "This is a description 6",
+            "This is a description 7",
+            "This is a description 8",
+        ],
         "skills": [
             {
                 "icon": faPencilAlt,
@@ -41,6 +51,13 @@ var portfolioData = [
         require("../../images/portfolio-items/multione-gen2/multione-gen2-3.png"),
         require("../../images/portfolio-items/multione-gen2/multione-gen2-4.png"),
         require("../../images/portfolio-items/multione-gen2/multione-gen2-5.png")
+    ],
+    "imageDescriptions": [
+        "Landing Page",
+        "Network and Devices - Here you can select a device/s and check its info and images to make sure it is correct.",
+        "Device features - allows you to enable/disablethe configuration of features on a device",
+        "Configure Features - This is where you can configure the selected features",
+        "Summary - Finally you get a summary of everything configured and how the device will behave and can download the XML configuration file",
     ],
     "skills": [{
             "icon": faPencilAlt,
@@ -71,6 +88,14 @@ var portfolioData = [
         require("../../images/portfolio-items/altran-academy/altran-academy5.png"),
         require("../../images/portfolio-items/altran-academy/altran-academy6.png")
     ],
+    "imageDescriptions": [
+        "This is a description 1",
+        "This is a description 2",
+        "This is a description 3",
+        "This is a description 4",
+        "This is a description 5",
+        "This is a description 6",
+    ],
     "skills": [{
             "icon": faAngular,
             "title": "Angular"
@@ -95,6 +120,14 @@ var portfolioData = [
         require("../../images/portfolio-items/gaia-gemstone-jewelery/ggj4.png"),
         require("../../images/portfolio-items/gaia-gemstone-jewelery/ggj5.png"),
         require("../../images/portfolio-items/gaia-gemstone-jewelery/ggj6.png")
+    ],
+    "imageDescriptions": [
+        "This is a description 1",
+        "This is a description 2",
+        "This is a description 3",
+        "This is a description 4",
+        "This is a description 5",
+        "This is a description 6",
     ],
     "skills": [
         {
